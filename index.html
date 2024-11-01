@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Exploração Espacial</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Formulário de Exploração Espacial</h2>
+      <form onsubmit="enviarDados(event)">
+        <div class="form-group">
+          <label for="name">Nome do Explorador:</label>
+          <input type="text" id="name" placeholder="Digite seu nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email para Contato:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Idade:</label>
+          <input
+            type="number"
+            id="age"
+            placeholder="Digite sua idade"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mission">Missão Espacial de Interesse:</label>
+          <select id="mission" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Apollo 11">Apollo 11</option>
+            <option value="Missão para Marte">Missão para Marte</option>
+            <option value="Exploração de Saturno">
+              Exploração de Saturno
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Nível de Experiência:</label>
+          <select id="experience" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Iniciante">Iniciante</option>
+            <option value="Intermediário">Intermediário</option>
+            <option value="Avançado">Avançado</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preference">Preferência de Exploração:</label>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="moon"
+              name="preference"
+              value="Lua"
+              required
+            />
+            <label for="moon">Lua</label>
+            <input
+              type="radio"
+              id="mars"
+              name="preference"
+              value="Marte"
+              required
+            />
+            <label for="mars">Marte</label>
+            <input
+              type="radio"
+              id="exoplanets"
+              name="preference"
+              value="Saturno"
+              required
+            />
+            <label for="exoplanets">Saturno</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comentários sobre a Exploração Espacial:</label>
+          <textarea class="text-area"
+            id="comments"
+            rows="4"
+            placeholder="Compartilhe suas ideias sobre a exploração espacial..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </div>
+
+    <!-- JavaScript para exibir um alerta -->
+    <script>
+      function enviarDados(event) {
+        event.preventDefault(); // Evita o recarregamento da página
+        alert(
+          "Dados enviados com sucesso! Obrigado por compartilhar seu interesse em exploração espacial."
+        );
+      }
+    </script>
+  </body>
+</html>
